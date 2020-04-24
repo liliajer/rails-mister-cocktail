@@ -1,0 +1,11 @@
+<h4> <%= @cocktail.name %> </h4>
+<table>
+  <% @cocktail.doses.each do |dose| %>
+   <tr>
+    <td> <%= dose.ingredient.name %> </td>
+    <td> <%= dose.description %> </td>
+  <% end %>
+  </tr>
+</table>
+
+ <%= render "doses/new", cocktail: @cocktail, dose: @dose %>
